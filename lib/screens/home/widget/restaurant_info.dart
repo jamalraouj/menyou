@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:menyou/constants/colors.dart';
 import 'package:menyou/models/restaurant.dart';
 
 class RestaurantInfo extends StatelessWidget{
@@ -30,16 +31,66 @@ class RestaurantInfo extends StatelessWidget{
                   Container(
                     padding: EdgeInsets.all(5),
                     decoration: BoxDecoration(
-                      color: Colors.grey.shade50
+                      color: Colors.grey.withOpacity(0.4),
+                      borderRadius: BorderRadius.circular(5)
                     ),
-                    child: Text(restaurant.waitTime)
+                    child: Text(
+                        restaurant.waitTime,
+                      style: TextStyle(
+                        color: Colors.white,
+                      ),
+                    )
                   ),
-                  Text(restaurant.distance),
-                  Text(restaurant.label),
-                ],)
+                  SizedBox(width: 10),
+                  Text(restaurant.distance,
+                  style: TextStyle(
+                    fontSize: 16,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.grey.withOpacity(0.4)
+                  ),),
+                  SizedBox(width: 10),
+                  Text(restaurant.label,
+                      style: TextStyle(
+                          fontSize: 16,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.grey.withOpacity(0.4)
+                      )),
+                ],
+                )
+
+              ],
+            ),
+            ClipRRect(
+              borderRadius: BorderRadius.circular(50),
+              child: Image.asset(restaurant.logoUrl,width: 80),
+
+            )
+          ],
+        ),
+        SizedBox(height: 5),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Text(
+                '"${restaurant.desc}"',
+                style: TextStyle(fontSize: 16),
+            ),
+            Row(
+              children: [
+                Icon(Icons.star_outlined,
+                color: kPrimaryColor),
+                Text(
+                  '${restaurant.score}',
+                  style: TextStyle(
+                    fontSize: 18,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                SizedBox(width: 15)
 
               ],
             )
+
           ],
         )
       ],),

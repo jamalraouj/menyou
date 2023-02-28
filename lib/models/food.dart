@@ -29,7 +29,7 @@ class Food{
 
   static List<Food> generateRecommendFoods(){
     return[
-      Food("assets/images/dish.png",
+      Food("assets/images/dish1.png",
           "no1. in Sales",
           'Soba Soup',
           '50 min',

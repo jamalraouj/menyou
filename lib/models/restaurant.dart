@@ -28,6 +28,13 @@ class Restaurant{
         {
           "Recommend": Food.generateRecommendFoods(),
           "Popular": Food.generateRecommendFoods(),
+          "Noodles": Food.generateRecommendFoods(),
+          "Pizza": Food.generateRecommendFoods(),
+          "Noodles1": Food.generateRecommendFoods(),
+          "Noodles3": Food.generateRecommendFoods(),
+          "Noodles4": Food.generateRecommendFoods(),
+          "Noodles5": Food.generateRecommendFoods(),
+          "Noodles6": Food.generateRecommendFoods(),
 
         });
   }
